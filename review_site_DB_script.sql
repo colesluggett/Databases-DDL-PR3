@@ -1,4 +1,3 @@
-
 CREATE TABLE PERSON(
     Fname VARCHAR(15),
     Lname VARCHAR(15),
@@ -50,7 +49,7 @@ CREATE TABLE LOCATION(
     Loc_date DATE,
     PRIMARY KEY(Person_ID, Loc_date),
     FOREIGN KEY(Person_ID) REFERENCES PERSON(Person_ID)
-)
+);
 CREATE TABLE FRIENDSHIP(
     Person_ID VARCHAR(15),
     Friend_ID VARCHAR(15),
@@ -58,8 +57,7 @@ CREATE TABLE FRIENDSHIP(
     PRIMARY KEY(Person_ID, Friend_ID, Friendship_ID),
     FOREIGN KEY(Person_ID) REFERENCES PERSON(Person_ID),
     FOREIGN KEY(Friend_ID) REFERENCES PERSON(Person_ID)
-)
-
+);
 INSERT INTO PERSON VALUES('Kayla', 'Wheeler',4064064060,'1998-04-21', 59718, ' Address ', '1', '1');
 INSERT INTO PERSON VALUES('Cole', 'Sluggett',4064064061,'1998-04-27', 59718, ' Address ', '1', '2');
 INSERT INTO PERSON VALUES('Dylan', 'Lynn',4064064062,'1994-01-01', 59718, ' Address ', '1', '3');
