@@ -61,12 +61,19 @@ CREATE TABLE FRIENDSHIP(
     FOREIGN KEY(Friend_ID) REFERENCES PERSON(Person_ID)
 );
 
-INSERT INTO PERSON VALUES('Kayla', 'Wheeler',4064064060,'1998-04-21', 59718, ' Address ', '1', '1');
-INSERT INTO PERSON VALUES('Cole', 'Sluggett',4064064061,'1998-04-27', 59718, ' Address ', '1', '2');
-INSERT INTO PERSON VALUES('Dylan', 'Lynn',4064064062,'1994-01-01', 59718, ' Address ', '1', '3');
-INSERT INTO PERSON VALUES('Bob', 'Smith',4064064063,'1995-07-02', 59102, ' Address ', '2', '4');
-INSERT INTO PERSON VALUES('Kate', 'Wong',4064064064,'2000-02-14', 59714, ' Address ', '3', '5');
-INSERT INTO PERSON VALUES('Alex', 'Michaels',4064064065,'1989-07-13', 59718, ' Address ', '3', '6');
+INSERT INTO PERSON VALUES('Kayla', 'Wheeler',4064064060,'email@gmail.com','1998-04-21', 59718, ' Address ', '1', '1');
+INSERT INTO PERSON VALUES('Cole', 'Sluggett',4064064061,'email@gmail.com','1998-04-27', 59718, ' Address ', '1', '2');
+INSERT INTO PERSON VALUES('Dylan', 'Lynn',4064064062,'email@gmail.com','1994-01-01', 59718, ' Address ', '1', '3');
+INSERT INTO PERSON VALUES('Bob', 'Smith',4064064063,'email@gmail.com','1995-07-02', 59102, ' Address ', '2', '4');
+INSERT INTO PERSON VALUES('Kate', 'Wong',4064064064,'email@gmail.com','2000-02-14', 59714, ' Address ', '3', '5');
+INSERT INTO PERSON VALUES('Alex', 'Michaels',4064064065,'email@gmail.com','1989-07-13', 59718, ' Address ', '3', '6');
+
+INSERT INTO ADMIN_LEVEL VALUES('1', 'Creator', 'Can change tables and pages');
+INSERT INTO ADMIN_LEVEL VALUES('2', 'Manager', 'Can change pages');
+INSERT INTO ADMIN_LEVEL VALUES('3', 'User', "Can't change tables or pages");
+INSERT INTO ADMIN_LEVEL VALUES('4', 'Guest', "Can't access anything on site");
+INSERT INTO ADMIN_LEVEL VALUES('5', 'Developer', 'Can change tables');
+
 
 INSERT INTO FRIENDSHIP VALUES('1', '2' ,'1');
 INSERT INTO FRIENDSHIP VALUES('2', '3' , '2');
