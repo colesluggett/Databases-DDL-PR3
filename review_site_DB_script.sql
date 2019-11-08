@@ -1,5 +1,12 @@
 CREATE SCHEMA BASE; 
 GO
+drop table if exists PERSON;
+drop table if exists ADMIN_LEVEL;
+drop table if exists RATING;
+drop table if exists REVIEWS;
+drop table if exists CREDIBILITY_SCORE;
+drop table if exists LOGGED_LOCATION;
+drop table if exists FRIENDSHIP;
 CREATE TABLE PERSON(
     Fname VARCHAR(15),
     Lname VARCHAR(15),
@@ -68,12 +75,12 @@ INSERT INTO PERSON VALUES('Bob', 'Smith',4064064063,'Email','1995-07-02', 59102,
 INSERT INTO PERSON VALUES('Kate', 'Wong',4064064064,'Email','2000-02-14', 59714, ' Address ', '3', '5');
 INSERT INTO PERSON VALUES('Alex', 'Michaels',4064064065,'Email','1989-07-13', 59718, ' Address ', '3', '6');
 
-INSERT INTO FRIENDSHIP VALUES('1', '2' ,'1');
-INSERT INTO FRIENDSHIP VALUES('2', '3' , '2');
-INSERT INTO FRIENDSHIP VALUES('3', '4' , '3');
-INSERT INTO FRIENDSHIP VALUES('5', '6' , '4');
-INSERT INTO FRIENDSHIP VALUES('3', '1' , '5');
-INSERT INTO FRIENDSHIP VALUES('6', '4' , '6');
+INSERT INTO ADMIN_LEVEL VALUES('1', 'Creator', 'Can change tables and pages');
+INSERT INTO ADMIN_LEVEL VALUES('2', 'Manager', 'Can change pages');
+INSERT INTO ADMIN_LEVEL VALUES('3', 'User', "Can't change tables or pages");
+INSERT INTO ADMIN_LEVEL VALUES('4', 'Guest', "Can't access anything on site");
+INSERT INTO ADMIN_LEVEL VALUES('5', 'Developer', 'Can change tables');
+
 
 INSERT INTO RATING VALUES('1', 5, 4);
 INSERT INTO RATING VALUES('2', 5 , 2);
@@ -93,6 +100,14 @@ INSERT INTO LOGGED_LOCATION VALUES('3', 'Bozeman', 'Montana', '2019-11-08');
 INSERT INTO LOGGED_LOCATION VALUES('4', 'Billings', 'Montana', '2019-11-08');
 INSERT INTO LOGGED_LOCATION VALUES('5', 'Bozeman', 'Montana', '2019-11-08');
 INSERT INTO LOGGED_LOCATION VALUES('6', 'Bozeman', 'Montana', '2019-11-08');
+
+INSERT INTO FRIENDSHIP VALUES('1', '2' ,'1');
+INSERT INTO FRIENDSHIP VALUES('2', '3' , '2');
+INSERT INTO FRIENDSHIP VALUES('3', '4' , '3');
+INSERT INTO FRIENDSHIP VALUES('5', '6' , '4');
+INSERT INTO FRIENDSHIP VALUES('3', '1' , '5');
+INSERT INTO FRIENDSHIP VALUES('6', '4' , '6');
+
 
 INSERT INTO CREDIBILITY_SCORE VALUES('1', 5 , 5);
 INSERT INTO CREDIBILITY_SCORE VALUES('2', 0 , 5);
