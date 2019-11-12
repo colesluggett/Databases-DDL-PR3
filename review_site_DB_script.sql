@@ -1,5 +1,5 @@
-CREATE SCHEMA BASE; 
-GO
+-- CREATE SCHEMA REVIEW_SITE;   create schema doesn't work in sqlite
+ 
 drop table if exists PERSON;
 drop table if exists ADMIN_LEVEL;
 drop table if exists RATING;
